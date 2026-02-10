@@ -66,8 +66,3 @@ footer {
   color: #888;
 }
 
-/* EXTRA SAFETY: dezactivează orice click */
-a, button {
-  pointer-events: none;
-  cursor: default;
-}
