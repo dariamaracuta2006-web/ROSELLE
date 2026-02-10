@@ -35,6 +35,22 @@ body {
   color: #777;
 }
 
+.btn {
+  margin-top: 40px;
+  padding: 12px 30px;
+  border: 1px solid #111;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #111;
+  color: #fff;
+}
+
 /* SECTIONS */
 .section {
   padding: 80px 20px;
@@ -65,20 +81,3 @@ footer {
   font-size: 13px;
   color: #888;
 }
-.btn {
-  margin-top: 25px;
-  padding: 12px 30px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background-color: #111;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: #444;
-}
-
