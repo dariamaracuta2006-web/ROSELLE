@@ -65,4 +65,20 @@ footer {
   font-size: 13px;
   color: #888;
 }
+.btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #444;
+}
 
