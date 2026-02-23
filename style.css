@@ -64,7 +64,7 @@ body { font-family: Arial, sans-serif; background: #fff; color: #111; line-heigh
 }
 .btn:hover { background: #111; color: #fff; }
 
-/* PAGE */
+
 .page { padding: 46px 0; }
 .page h1 { font-size: 38px; font-weight: 500; margin-bottom: 12px; }
 .page h2 { font-size: 22px; font-weight: 600; margin-top: 22px; margin-bottom: 8px; }
