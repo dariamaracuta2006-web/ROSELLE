@@ -306,93 +306,37 @@ body {
   color: var(--accent);
 }
 
-.gallery-hero {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.gallery-hero h1 {
-  font-size: 42px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.gallery-hero .subtitle {
-  max-width: 700px;
-  margin: 0 auto;
-  color: var(--muted);
-  font-size: 16px;
-}
-
-
-.gallery-grid {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
-}
-
-.gallery-item {
+.gallery-item,
+.product-card {
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.gallery-item:hover {
+.gallery-item:hover,
+.product-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-photo {
+.gallery-photo,
+.product-photo {
   width: 100%;
-  height: 100%;
-  min-height: 260px;
-  max-height: 520px;
+  height: 240px;
   object-fit: cover;
   display: block;
-  transition: transform 0.45s ease;
+  transition: transform 0.4s ease;
 }
 
-.gallery-item:hover .gallery-photo {
-  transform: scale(1.05);
+.gallery-item:hover .gallery-photo,
+.product-card:hover .product-photo {
+  transform: scale(1.06);
 }
 
-
-.gallery-info {
-  padding: 18px;
+.gallery-info,
+.product-info {
+  padding: 20px;
 }
 
-.gallery-info h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: var(--text);
-}
-
-.gallery-info p {
-  color: var(--muted);
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.gallery-item.hero {
-  grid-column: span 12;
-}
-
-.gallery-item.large {
-  grid-column: span 6;
-}
-
-.gallery-item.medium {
-  grid-column: span 4;
-}
-
-.gallery-item.small {
-  grid-column: span 3;
-}
 .price {
   display: inline-block;
   margin-top: 12px;
@@ -401,37 +345,139 @@ body {
   font-size: 18px;
 }
 
-@media (max-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ===== ROSELLE EDITORIAL GALLERY ===== */
 
-  .gallery-item.hero,
-  .gallery-item.large,
-  .gallery-item.medium,
-  .gallery-item.small {
-    grid-column: span 1;
-  }
-
-  .gallery-photo {
-    min-height: 240px;
-    max-height: 360px;
-  }
+.editorial-hero {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-@media (max-width: 600px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
+.editorial-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
 
-  .gallery-photo {
-    min-height: 220px;
-    max-height: 320px;
-  }
+.editorial-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
 
-  .gallery-hero h1 {
-    font-size: 32px;
-  }
+.editorial-img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.editorial-card:hover .editorial-img {
+  transform: scale(1.04);
+}
+
+.hero-card {
+  grid-column: span 12;
+  min-height: 500px;
+}
+
+.small-card {
+  grid-column: span 6;
+  min-height: 320px;
+}
+
+.text-card {
+  grid-column: span 6;
+  min-height: 320px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(180deg, #fffafd 0%, #fff2f6 100%);
+}
+
+.medium-card {
+  grid-column: span 4;
+  min-height: 320px;
+}
+
+.quote-card {
+  grid-column: span 4;
+  min-height: 320px;
+  padding: 30px;
+  background: linear-gradient(180deg, #fff6f9 0%, #fff0f4 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.large-card {
+  grid-column: span 4;
+  min-height: 420px;
+}
+
+.wide-card {
+  grid-column: span 12;
+  min-height: 420px;
+}
+
+.editorial-overlay {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  max-width: 500px;
+  color: white;
+  background: rgba(181, 124, 144, 0.22);
+  backdrop-filter: blur(8px);
+  padding: 24px 28px;
+  border-radius: 20px;
+}
+
+.editorial-overlay h2 {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.editorial-overlay p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.text-card h3 {
+  font-size: 32px;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.text-card p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.quote-big {
+  font-size: 64px;
+  line-height: 0.9;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: rgba(181, 124, 144, 0.25);
+  margin-bottom: 20px;
+}
+
+.quote-card p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
 footer {
@@ -452,6 +498,41 @@ footer {
 
   .hero h1 {
     font-size: 50px;
+  }
+
+  .editorial-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-card,
+  .small-card,
+  .text-card,
+  .medium-card,
+  .quote-card,
+  .large-card,
+  .wide-card {
+    grid-column: span 1;
+    min-height: 300px;
+  }
+
+  .hero-card {
+    min-height: 360px;
+  }
+
+  .editorial-overlay {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    max-width: none;
+    padding: 18px 20px;
+  }
+
+  .editorial-overlay h2 {
+    font-size: 34px;
+  }
+
+  .quote-big {
+    font-size: 48px;
   }
 }
 
@@ -497,31 +578,36 @@ footer {
   .page h2 {
     font-size: 22px;
   }
-.product-photo {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-  .gallery-item.hero .gallery-photo {
-  min-height: 450px;
-}
-  .gallery-grid {
-  gap: 30px;
-}
-  .gallery-item {
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-    .gallery-item {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.8s ease forwards;
-}
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .product-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
   }
 }
-  
+
+@media (max-width: 600px) {
+  .editorial-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card,
+  .small-card,
+  .text-card,
+  .medium-card,
+  .quote-card,
+  .large-card,
+  .wide-card {
+    grid-column: span 1;
+  }
+
+  .text-card,
+  .quote-card {
+    padding: 24px;
+  }
+
+  .editorial-overlay h2 {
+    font-size: 28px;
+  }
 }
