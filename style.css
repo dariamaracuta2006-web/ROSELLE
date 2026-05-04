@@ -1,4 +1,4 @@
-[04.05.2026 20:01] 𝐃𝐚𝐫𝐢𝐚 𝐌𝐚𝐫𝐚𝐜𝐮𝐭𝐚: * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -265,7 +265,7 @@ body {
   margin: 0;
   color: var(--muted);
 }
-[04.05.2026 20:01] 𝐃𝐚𝐫𝐢𝐚 𝐌𝐚𝐫𝐚𝐜𝐮𝐭𝐚: .home-preview {
+ .home-preview {
   padding: 10px 0 60px;
 }
 
@@ -309,6 +309,11 @@ body {
 .product-card {
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
 .gallery-item:hover,
@@ -421,4 +426,7 @@ footer {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .product-card img {
+  height: 260px;
+}
 }
