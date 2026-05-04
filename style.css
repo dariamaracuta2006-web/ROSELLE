@@ -310,10 +310,14 @@ body {
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+.product-card {
+  width: 320px;
+}
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: center;
+  gap: 30px;
 }
 
 .gallery-item:hover,
