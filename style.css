@@ -447,29 +447,40 @@ footer {
   background: #9f647a;
 }
 
-
 @media (max-width: 700px) {
   .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid {
     grid-template-columns: 1fr;
   }
 
   .product-card {
     width: 100%;
   }
-  .product-grid {
+}
+
+/* PRODUSE - STIL NORMAL (în afara media) */
+
+.products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 330px);
-  justify-content: center;
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
 }
 
 .product-card {
-  width: 330px;
+  width: 100%;
 }
 
+.product-photo,
 .product-card img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  display: block;
 }
+
+.product-info {
+  padding: 16px;
 }
