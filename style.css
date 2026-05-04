@@ -499,4 +499,18 @@ body {
 footer {
   background: #fff6fa;
 }
+  body {
+  font-family: "Montserrat", sans-serif;
+  background: #fff2f7;
+}
+
+.brand {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 6px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 56px;
+}
 }
