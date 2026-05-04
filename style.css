@@ -379,4 +379,124 @@ footer {
   .hero h1 {
     font-size: 42px;
   }
+  /* LUXURY ROSELLE DESIGN */
+
+:root {
+  --bg: #fff2f7;
+  --surface: #ffffff;
+  --surface-soft: #fde7ef;
+  --text: #1f1b1d;
+  --muted: #71666b;
+  --accent: #b76f8b;
+  --accent-dark: #96556f;
+  --line: #f0d6df;
+}
+
+body {
+  background: linear-gradient(180deg, #fff2f7 0%, #fff8fb 100%);
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+}
+
+.brand {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  letter-spacing: 7px;
+  color: var(--accent);
+}
+
+.menu a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.page h1,
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 58px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.section-tag,
+.slogan {
+  color: var(--accent);
+  letter-spacing: 4px;
+  font-size: 13px;
+}
+
+.lead,
+.page p {
+  font-size: 17px;
+  color: var(--muted);
+}
+
+.nav {
+  background: rgba(255, 242, 247, 0.88);
+  backdrop-filter: blur(14px);
+}
+
+.btn,
+.product-btn,
+.menu a.active {
+  background: linear-gradient(135deg, #c98aa1, #a95f7a);
+  color: white !important;
+  box-shadow: 0 12px 30px rgba(183, 111, 139, 0.25);
+}
+
+.btn:hover,
+.product-btn:hover {
+  background: linear-gradient(135deg, #a95f7a, #884860);
+  transform: translateY(-2px);
+}
+
+.product-card,
+.contact-card,
+.soft-banner {
+  border-radius: 28px;
+  border: 1px solid #f0d6df;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 45px rgba(183, 111, 139, 0.16);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 70px rgba(183, 111, 139, 0.28);
+}
+
+.product-card img,
+.product-photo {
+  border-radius: 28px 28px 0 0;
+}
+
+.product-info h3,
+.product-info h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #1f1b1d;
+}
+
+.price {
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.soft-banner {
+  background: linear-gradient(135deg, #fde7ef, #fff7fa);
+  padding: 60px 30px;
+}
+
+.wave-sale {
+  background: linear-gradient(135deg, #c98aa1, #a95f7a);
+  letter-spacing: 3px;
+}
+
+.contact-card {
+  padding: 40px;
+}
+
+footer {
+  background: #fff6fa;
+}
 }
