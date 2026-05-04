@@ -1,5 +1,3 @@
-console.log("ROSELLE LUX MODE");
-
 // ===== APARIȚIE CU EFECT PUTERNIC =====
 const observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
