@@ -364,6 +364,7 @@ footer {
 }
 
 @media (max-width: 900px) {
+}
   .about-grid,
   .preview-grid {
     grid-template-columns: 1fr;
@@ -372,58 +373,6 @@ footer {
   .hero h1 {
     font-size: 50px;
   }
-}
-
-/* GALERIE FIX */
-
-.shop-gallery {
-  max-width: 1100px;
-  margin: 40px auto;
-}
-
-.soft-banner {
-  background: #f7e8ee;
-  border-radius: 30px;
-  text-align: center;
-  padding: 45px 25px;
-  margin-bottom: 25px;
-}
-
-.wave-sale {
-  background: #b77b92;
-  color: white;
-  padding: 14px;
-  margin: 25px 0;
-  border-radius: 50px;
-  font-size: 13px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-.product-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
-
-.product-btn {
-  display: inline-block;
-  background: #b77b92;
-  color: white !important;
-  padding: 10px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-top: 12px;
-}
-
-.product-btn:hover {
-  background: #9f647a;
-}
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -433,7 +382,7 @@ footer {
   .product-card img {
   height: 260px;
 }
-  /* SHOP REAL VERSION */
+  /* SHOP REAL FINAL */
 
 .product-grid {
   display: grid;
@@ -459,7 +408,6 @@ footer {
 .product-card img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  height: auto;
   object-fit: cover;
   display: block;
   transition: 0.4s ease;
@@ -493,18 +441,12 @@ footer {
   border-radius: 30px;
   text-decoration: none;
   font-size: 12px;
-  letter-spacing: 0.5px;
 }
 
 .product-btn:hover {
   background: #9f647a;
 }
 
-@media (max-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 330px);
-  }
-}
 
 @media (max-width: 700px) {
   .product-grid {
@@ -514,5 +456,20 @@ footer {
   .product-card {
     width: 100%;
   }
+  .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 330px);
+  justify-content: center;
+  gap: 35px;
+}
+
+.product-card {
+  width: 330px;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 }
