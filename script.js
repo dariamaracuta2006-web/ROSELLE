@@ -1,6 +1,3 @@
-console.log("JavaScript ROSELLE funcționează");
-
-// Efect luxury la apariția cardurilor
 const observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
     if (entry.isIntersecting) {
