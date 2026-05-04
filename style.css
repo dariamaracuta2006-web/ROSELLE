@@ -1,67 +1,78 @@
-/* RESET */
-* {
+[04.05.2026 20:01] 𝐃𝐚𝐫𝐢𝐚 𝐌𝐚𝐫𝐚𝐜𝐮𝐭𝐚: * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* VARIABILE */
 :root {
   --bg: #fffafc;
   --surface: #ffffff;
   --surface-soft: #fff4f7;
   --text: #1a1a1a;
   --muted: #6f6f6f;
-  --line: #eee3e8;
+  --line: #eee3e8; 
   --accent: #b57c90;
   --accent-dark: #9d667a;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   --radius: 16px;
 }
 
-/* BODY */
 body {
   font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.6;
 }
 
-/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* NAVBAR */
 .nav {
   position: sticky;
   top: 0;
-  background: #fffafc;
+  background: rgba(255, 250, 252, 0.92);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
+  z-index: 1000;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .brand {
   text-decoration: none;
   color: var(--accent);
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 4px;
-  font-size: 24px;
+  font-size: 26px;
 }
+
+.menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+} 
 
 .menu a {
   text-decoration: none;
   color: var(--muted);
-  margin-left: 10px;
   padding: 10px 14px;
   border-radius: 999px;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.menu a:hover {
+  background: var(--surface-soft);
+  color: var(--accent);
 }
 
 .menu a.active {
@@ -69,33 +80,215 @@ body {
   color: #fff;
 }
 
-/* PAGE */
-.page {
-  padding: 50px 0;
+.hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
   text-align: center;
+  background:
+    linear-gradient(rgba(255, 250, 252, 0.78), rgba(255, 250, 252, 0.78)),
+    url("imagini/p1.jpg") center/cover no-repeat;
+}
+
+.hero-inner {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.section-tag {
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.hero h1 {
+  font-size: 68px;
+  font-weight: 300;
+  letter-spacing: 6px;
+  color: var(--text);
+}
+
+.slogan {
+  margin-top: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hero-text,
+.lead {
+  max-width: 720px;
+  margin: 18px auto 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-actions,
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--surface-soft);
+  color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.btn.whatsapp {
+  background: #25d366;
+  border-color: #25d366;
+  color: #fff;
+}
+
+.btn.whatsapp:hover {
+  background: #1fb65a;
+  border-color: #1fb65a;
+}
+
+.page {
+  padding: 56px 0;
 }
 
 .page h1 {
-  font-size: 38px;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.page h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.page p {
+  color: var(--muted);
   margin-bottom: 10px;
 }
 
 .subtitle {
   color: var(--muted);
+  margin-bottom: 22px;
+  text-align: center;
 }
 
-/* CONTACT CARD */
+.grid,
+.about-grid,
+.preview-grid,
+.gallery-grid,
+.products-grid {
+  margin-top: 22px;
+  display: grid;
+  gap: 20px;
+}
+
+.about-grid,
+.preview-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-grid,
+.products-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card,
+.info-box,
+.preview-card,
+.about-card,
+.gallery-item,
+.product-card,
 .contact-card {
-  max-width: 600px;
-  margin: 30px auto;
-  background: white;
-  padding: 25px;
-  border-radius: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
   box-shadow: var(--shadow);
 }
 
+.card,
+.info-box,
+.preview-card,
+.about-card,
+.contact-card {
+  padding: 22px;
+}
+
+.card h3,
+.info-box h3,
+.product-info h3,
+.gallery-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.card p,
+.info-box p,
+.preview-card p,
+.about-card p,
+.gallery-info p,
+.product-info p {
+  margin: 0;
+  color: var(--muted);
+}
+[04.05.2026 20:01] 𝐃𝐚𝐫𝐢𝐚 𝐌𝐚𝐫𝐚𝐜𝐮𝐭𝐚: .home-preview {
+  padding: 10px 0 60px;
+}
+
+.preview-card {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.about-hero,
+.gallery-hero,
+.products-hero {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.contact-card {
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
 .contact-card p {
-  margin: 15px 0;
+  font-size: 17px;
+  margin: 14px 0;
 }
 
 .contact-card i {
@@ -108,90 +301,109 @@ body {
   text-decoration: none;
 }
 
-/* BUTTON */
-.btn {
+.contact-card a:hover {
+  color: var(--accent);
+}
+
+.gallery-item,
+.product-card {
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-item:hover,
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-photo,
+.product-photo {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-photo,
+.product-card:hover .product-photo {
+  transform: scale(1.06);
+}
+
+.gallery-info,
+.product-info {
+  padding: 20px;
+}
+
+.price {
   display: inline-block;
-  margin-top: 20px;
-  background: var(--accent);
-  color: white;
-  padding: 12px 22px;
-  border-radius: 30px;
-  text-decoration: none;
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 18px;
 }
 
-.btn:hover {
-  background: var(--accent-dark);
+footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+  margin-top: 50px;
+  color: #888;
+  font-size: 13px;
+  text-align: center;
+  background: var(--surface);
 }
 
-/* GALERIE */
+@media (max-width: 900px) {
+  .about-grid,
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+}
+
+/* GALERIE FIX */
+
 .shop-gallery {
   max-width: 1100px;
   margin: 40px auto;
 }
 
-/* BANNER */
 .soft-banner {
   background: #f7e8ee;
   border-radius: 30px;
-  padding: 40px;
+  text-align: center;
+  padding: 45px 25px;
   margin-bottom: 25px;
 }
 
 .wave-sale {
   background: #b77b92;
   color: white;
-  padding: 12px;
+  padding: 14px;
+  margin: 25px 0;
   border-radius: 50px;
-  margin: 20px 0;
   font-size: 13px;
 }
 
-/* GRID */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
-/* CARD */
-.product-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-/* IMAGE FIX */
 .product-card img {
   width: 100%;
-  height: 220px; /* 🔥 asta rezolva problema ta */
+  height: 220px;
   object-fit: cover;
 }
 
-/* TEXT */
-.product-info {
-  padding: 15px;
-}
-
-.product-info h4 {
-  margin-bottom: 5px;
-}
-
-.product-info p {
-  color: #777;
-}
-
-/* BUTTON PRODUCT */
 .product-btn {
-  display: inline-block;
-  margin-top: 10px;
   background: #b77b92;
-  color: white;
+  color: white !important;
   padding: 10px 20px;
   border-radius: 30px;
   text-decoration: none;
@@ -199,14 +411,6 @@ body {
 
 .product-btn:hover {
   background: #9f647a;
-}
-
-/* FOOTER */
-footer {
-  margin-top: 40px;
-  padding: 20px;
-  text-align: center;
-  color: #888;
 }
 
 /* MOBILE */
