@@ -483,3 +483,15 @@ h1, h2, h3 {
 p, .lead {
   color: #6d5b60 !important;
 }
+.hero .actions {
+  margin-top: 180px !important;
+}
+body {
+  background: linear-gradient(180deg, #ffd6e6 0%, #fff0f7 100%) !important;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(255, 214, 230, 0.85), rgba(255, 240, 247, 0.95)),
+    url("imagini/p1.jpg") center/cover no-repeat !important;
+}
