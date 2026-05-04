@@ -514,4 +514,27 @@ footer {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+.gallery-banner img {
+  height: 350px;
+  border-radius: 25px;
+}
+
+.product-card img {
+  height: 220px;
+}
+  a {
+  text-decoration: none;
+  color: inherit;
+}
+  a {
+  text-decoration: none;
+  color: inherit;
+}
+  * {
+  transition: all 0.3s ease;
+}
+  .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(183, 123, 146, 0.2);
+}
 }
