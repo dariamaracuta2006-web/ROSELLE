@@ -24,5 +24,5 @@ buttons.forEach(function(btn) {
 
   btn.addEventListener("mouseout", function() {
     btn.style.opacity = "1";
-  });
+  }); 
 });
