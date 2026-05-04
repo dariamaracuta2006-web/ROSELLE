@@ -466,3 +466,14 @@ body {
 footer {
   background: #fff6fa;
 }
+body {
+  color: #5a4a4f; 
+}
+.hero h1,
+.page h1 {
+  color: #3f2f35;
+}
+.section-tag,
+.slogan {
+  color: #b76f8b;
+}
