@@ -1,4 +1,3 @@
-// ===== TEST =====
 console.log("JS functioneaza");
 
 // ===== EFECT PE PRODUSE =====
