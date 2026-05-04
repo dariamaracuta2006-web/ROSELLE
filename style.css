@@ -411,7 +411,7 @@ body {
 
 /* HERO FIX */
 .hero {
-  min-height: 75vh;
+  min-height: calc(100vh - 70px);
 }
 
 .hero-inner {
