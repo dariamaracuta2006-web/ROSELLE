@@ -1,5 +1,15 @@
-const observer = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
+document.body.style.opacity = "0";
+
+window.addEventListener("load", function () {
+  document.body.style.transition = "opacity 0.8s ease";
+  document.body.style.opacity = "1";
+});
+
+// Apariție elegantă la scroll
+const cards = document.querySelectorAll(".product-card");
+
+const observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
     if (entry.isIntersecting) {
       entry.target.style.opacity = "1";
       entry.target.style.transform = "translateY(0) scale(1)";
@@ -7,55 +17,36 @@ const observer = new IntersectionObserver(function(entries) {
   });
 });
 
-const cards = document.querySelectorAll(".product-card");
-
-cards.forEach(function(card) {
+cards.forEach(function (card) {
   card.style.opacity = "0";
-  card.style.transform = "translateY(80px) scale(0.8)";
-  card.style.transition = "all 0.8s ease";
-
+  card.style.transform = "translateY(60px) scale(0.9)";
+  card.style.transition = "all 0.7s ease";
   observer.observe(card);
 
-  // ===== HOVER WOW =====
-  card.addEventListener("mouseenter", function() {
-    card.style.transform = "translateY(-15px) scale(1.07) rotateX(5deg)";
-    card.style.boxShadow = "0 40px 80px rgba(181, 124, 144, 0.4)";
+  card.addEventListener("mouseenter", function () {
+    card.style.transform = "translateY(-12px) scale(1.05)";
+    card.style.boxShadow = "0 30px 70px rgba(181, 124, 144, 0.35)";
   });
 
-  card.addEventListener("mouseleave", function() {
+  card.addEventListener("mouseleave", function () {
     card.style.transform = "translateY(0) scale(1)";
-    card.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
+    card.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.06)";
   });
 });
 
-// ===== BUTOANE PREMIUM =====
+// Butoane luxury
 const buttons = document.querySelectorAll(".btn, .product-btn");
 
-buttons.forEach(function(btn) {
-  btn.addEventListener("mouseenter", function() {
-    btn.style.transform = "scale(1.15)";
-    btn.style.boxShadow = "0 10px 30px rgba(181,124,144,0.5)";
+buttons.forEach(function (button) {
+  button.style.transition = "all 0.3s ease";
+
+  button.addEventListener("mouseenter", function () {
+    button.style.transform = "scale(1.1)";
+    button.style.boxShadow = "0 10px 30px rgba(181, 124, 144, 0.45)";
   });
 
-  btn.addEventListener("mouseleave", function() {
-    btn.style.transform = "scale(1)";
-    btn.style.boxShadow = "none";
-  });
-});
-
-// ===== CLICK EFFECT (WOW) =====
-cards.forEach(function(card) {
-  card.addEventListener("click", function() {
-    card.style.transform = "scale(0.95)";
-    setTimeout(function() {
-      card.style.transform = "scale(1)";
-    }, 150);
+  button.addEventListener("mouseleave", function () {
+    button.style.transform = "scale(1)";
+    button.style.boxShadow = "none";
   });
 });
-
-// ===== FADE PAGINĂ =====
-document.body.style.opacity = "0";
-window.onload = function() {
-  document.body.style.transition = "0.8s";
-  document.body.style.opacity = "1";
-};
