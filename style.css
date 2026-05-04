@@ -124,8 +124,9 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
+ .hero {
   background:
-    linear-gradient(rgba(255, 250, 252, 0.78), rgba(255, 250, 252, 0.78)),
+    linear-gradient(rgba(255, 220, 235, 0.85), rgba(255, 235, 245, 0.9)),
     url("imagini/p1.jpg") center/cover no-repeat;
 }
 
