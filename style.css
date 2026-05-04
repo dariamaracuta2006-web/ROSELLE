@@ -414,3 +414,6 @@ footer {
   object-fit: cover;
   border-radius: 12px;
 }
+  .hero-img {
+  max-height: 400px;
+}
